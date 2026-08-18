@@ -1,0 +1,11 @@
+title: Aleph Personal Library
+description: "The goal is not to read books. It is to interconnect them. A living graph of ideas for iOS."
+author: Diego Zárate Rosales
+url: "https://tu-usuario.github.io"
+baseurl: "/aleph" # Modificar por "" si es un repositorio de usuario (tu-usuario.github.io) o mantener el nombre del repo si es de proyecto
+permalink: /:title/
+markdown: kramdown
+timezone: America/Puerto_Rico
+exclude:
+  - README.md
+  - .gitignore

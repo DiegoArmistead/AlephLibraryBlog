@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" type="image/png" href="{{ '/aleph_icon_1024.png' | relative_url }}">
+  <style>
+    /* Insertar bloque CSS del documento anterior íntegro */
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="mark" href="{{ '/' | relative_url }}">
+        <img src="{{ '/aleph_logo_tinta_transparente.png' | relative_url }}" alt="Aleph Icon">
+        <span>Aleph</span>
+      </a>
+      <span class="status">iOS · Coming Soon</span>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer>
+    <div class="wrap">
+      <img src="{{ '/aleph_wordmark-2.png' | relative_url }}" alt="Aleph Wordmark" class="wordmark">
+      <p class="tag">Engineered by one person, with severe rigor. For those who read to build mental models, not to show off a counter.</p>
+      <p class="meta">Coming Soon to iOS · &copy; {{ site.time | date: '%Y' }}</p>
+    </div>
+  </footer>
+</body>
+</html>
