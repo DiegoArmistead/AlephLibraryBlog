@@ -1,0 +1,14 @@
+# macOS OS Metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Jekyll Build & Cache
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby / Bundler
+vendor/
+.bundle/
