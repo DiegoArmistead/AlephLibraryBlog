@@ -137,6 +137,23 @@ La tesis completa no era solo "interconnect". Corregido en el hero:
 - Sub abre con *"Reading here isn't linear."*
 - Refleja la frase del usuario: *"the goal is not to read books linearly, but harvest, interconnect, assimilate and process the ideas."*
 
+### 3.6 — Requisitos de Apple para publicar (P0, para el 1-nov) ⭐
+**Avance 2026-08-19:** `/privacy` y `/terms` ✅ **REDACTADOS** (`privacy.html` + `terms.html` en el repo, enlazados en el footer; **sin pushear** — el usuario los revisa). Correo → el usuario eligió **iCloud+ Custom Email Domain**. Lista/blast → **Buttondown**. Falta: revisar+publicar los legales, montar el correo, poner la URL de privacidad en App Store Connect, y verificar que la app declare bien sus datos.
+
+Para subir al App Store faltan cosas que viven en / enlazan desde el sitio:
+- **Política de Privacidad** — URL **obligatoria** en App Store Connect → crear página `/privacy` en el sitio (la app usa Health, ubicación, CloudKit, IA on-device → hay que declararlo).
+- **Términos de Servicio** (recomendado) → `/terms`.
+- **Correo de contacto / soporte** — Apple pide un contacto de soporte. Falta hacerlo **real**: `support@alephlibrary.com` + `hello@alephlibrary.com` (hoy el sitio usa `hello@` como `mailto:` sin buzón detrás).
+  - **Recibir** (lo mínimo para Apple): **Cloudflare Email Routing** (gratis, ya usas Cloudflare — reenvía `support@`/`hello@` a tu bandeja actual, 5 min) **o** **iCloud+ Custom Email Domain** (nativo, ya pagas iCloud+; permite recibir *y* enviar como support@).
+  - "Google Pro": si es **Google Workspace** da correo `@alephlibrary.com`; si es **Google One / AI Pro** (consumidor) **NO** da correo con dominio.
+- Screenshots + metadata + íconos en App Store Connect (ver `MVP_ROADMAP` §1–2, P0).
+
+### 3.7 — Envío del blast de lanzamiento (herramienta)
+El Worker+D1 (si se hace) **solo guarda** correos; **enviar** el aviso a todos necesita aparte:
+- **Buttondown** = junta + envía en un panel, sin código (opción actual). Free ~100 subs.
+- **Script + plantilla HTML** = sí funciona, pero envía a través de una **API de correo** (NO desde Gmail personal → spam). Sweet-spot: **Resend** (free ~100/día, plantillas, integra con Workers). Alternativas: Amazon SES (barato a escala), Postmark.
+- **Decisión pendiente:** Buttondown (simple) **vs** Worker+D1 (guardar, tuyo) + Resend + script (soberano).
+
 ## 4. 💡 Ideas / Mejoras futuras
 
 - **Blog de verdad** (Jekyll ya lo soporta): ensayos sobre lectura, la Gran Conversación, el método — refuerza el moat de marca y el SEO. Carpeta `_posts/`.
@@ -157,6 +174,11 @@ La tesis completa no era solo "interconnect". Corregido en el hero:
 - [x] ~~Homogenizar **dark mode** con la app~~ ✅ (coral + fondo frío).
 - [x] ~~Agrandar el **wordmark del footer**~~ ✅.
 - [x] ~~**Corregir el mensaje/tesis** del hero (3.5): harvest → interconnect → assimilate → process (no lectura lineal).~~ ✅
+- [x] ~~**Política de Privacidad** `/privacy` + Términos `/terms`~~ ✅ redactados (falta revisar + push).
+- [ ] **Correo support/contacto real** → iCloud+ Custom Email Domain (pasos dados; DNS en Cloudflare).
+- [ ] **Dirección postal en Buttondown** (CAN-SPAM: los correos comerciales exigen dirección física + unsubscribe) antes del blast del 1-nov.
+- [x] ~~Legales: sección "Regional rights" (US/CA + EEA/UK) + línea de protección al consumidor~~ ✅ agregadas.
+- [ ] Poner la **URL de privacidad** (`alephlibrary.com/privacy/`) en App Store Connect + "App Privacy" (nutrition label).
 - [ ] Imagen **OG 1200×630** (3.3).
 - [ ] Capturas reales de la app en el iPhone (3.4).
 - [ ] Verificar en device real (Safari iOS, claro/oscuro).
