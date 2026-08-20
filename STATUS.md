@@ -125,8 +125,8 @@ setInterval(() => {
 ### 3.3 — Imagen social (Open Graph) 1200×630
 `og:image` apunta hoy al ícono cuadrado (se recorta feo al compartir). Falta una imagen **1200×630** dedicada (papel + titular + ℵ). Guardarla como `/og-image.png` y actualizar `og:image` / `twitter:image` en `default.html`.
 
-### 3.4 — Capturas reales de la app
-El marco de iPhone (`.phone .scene` en `index.html`) tiene un placeholder con un comentario: *"swap this block for `<img>`"*. Cuando haya capturas, meterlas ahí (idealmente 2-3 pantallas: lector, grafo, repaso).
+### 3.4 — Pantalla de la app en el iPhone ✅ HECHO (recreación) — screenshots reales opcionales
+El marco de iPhone (`.phone .scene`) muestra una **recreación fiel de la UI de Aleph** con datos sintéticos (pantalla "Tus libros" con LEYENDO/POR TERMINAR/LIBRO FAVORITO + "Cita favorita" + tab bar con Constelación), en el mismo lenguaje de la app (dark/light, coral `#E9614F`, serif crema, tarjetas). El bloque `.scene` se puede **cambiar por un `<img>`** cuando el usuario tenga capturas reales (idealmente lector/grafo/repaso).
 
 ---
 
@@ -180,6 +180,6 @@ El Worker+D1 (si se hace) **solo guarda** correos; **enviar** el aviso a todos n
 - [x] ~~Legales: sección "Regional rights" (US/CA + EEA/UK) + línea de protección al consumidor~~ ✅ agregadas.
 - [ ] Poner la **URL de privacidad** (`alephlibrary.com/privacy/`) en App Store Connect + "App Privacy" (nutrition label).
 - [x] ~~Imagen **OG 1200×630**~~ ✅ (`og-image.png`, generada con Swift/AppKit + enlazada en `og:image`/`twitter:image`).
-- [ ] Capturas reales de la app en el iPhone (3.4).
+- [x] ~~Pantalla de la app en el iPhone~~ ✅ recreación fiel de la UI (swap por screenshots reales luego, 3.4).
 - [ ] Verificar en device real (Safari iOS, claro/oscuro).
 - [ ] `git push` → Cloudflare purga caché (o purgar manual).

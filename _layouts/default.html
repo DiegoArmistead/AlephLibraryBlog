@@ -244,18 +244,34 @@
       background:radial-gradient(120% 90% at 50% 0%,var(--paper-2),var(--paper));border:1px solid var(--hair)}
     .phone .island{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:34%;height:22px;
       background:#0b0a08;border-radius:999px;z-index:3}
-    /* In-app placeholder scene — swap the .scene block for <img> when real screenshots are ready. */
-    .scene{position:absolute;inset:0;padding:44px 18px 20px;display:flex;flex-direction:column;gap:12px}
-    .scene .sh-eyebrow{font-family:ui-monospace,monospace;font-size:8.5px;letter-spacing:.18em;color:var(--rubric);text-transform:uppercase}
-    .scene .sh-title{font-family:ui-serif,"New York",Palatino,Georgia,serif;font-size:16px;font-weight:700;line-height:1.15;color:var(--ink)}
-    .scene .hl{position:relative;font-size:11px;line-height:1.5;color:var(--ink-soft);padding:2px 0}
-    .scene .hl b{color:var(--ink);background:linear-gradient(transparent 62%,color-mix(in srgb,var(--gold) 40%,transparent) 0)}
-    .scene .mini{margin-top:auto;height:96px;border-radius:14px;border:1px solid var(--hair);background:var(--surface);position:relative;overflow:hidden}
-    .scene .chipbar{display:flex;gap:6px;flex-wrap:wrap}
-    .scene .chip2{font-size:8px;color:var(--ink-soft);border:1px solid var(--hair-strong);border-radius:999px;padding:3px 8px}
-    .badge-soon{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);z-index:4;font-family:ui-monospace,monospace;
-      font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);background:color-mix(in srgb,var(--paper) 80%,transparent);
-      -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);border:1px solid var(--hair);border-radius:999px;padding:5px 11px}
+    /* In-app scene — a faithful recreation of the Aleph UI (synthetic data). Swap the .scene block for a real screenshot <img> later. */
+    .scene{position:absolute;inset:0;display:flex;flex-direction:column}
+    .app-status{display:flex;justify-content:space-between;align-items:center;padding:15px 20px 0;font-size:9px;font-weight:700;color:var(--ink)}
+    .app-status .sig{display:flex;gap:2px;align-items:flex-end}
+    .app-status .sig i{width:3px;background:var(--ink);border-radius:1px}
+    .app-body{flex:1;overflow:hidden;padding:12px 14px 6px;display:flex;flex-direction:column;gap:10px}
+    .app-topbar{display:flex;justify-content:flex-end;gap:7px;margin-bottom:1px}
+    .app-topbar span{width:23px;height:23px;border:1px solid var(--hair-strong);border-radius:7px;display:flex;align-items:center;justify-content:center;color:var(--rubric)}
+    .app-topbar svg{width:12px;height:12px}
+    .app-h{font-family:ui-serif,"New York",Palatino,Georgia,serif;font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+    .app-card{background:var(--surface);border:1px solid var(--hair);border-radius:13px;overflow:hidden}
+    .app-row{display:flex;align-items:center;gap:10px;padding:9px 11px}
+    .app-row + .app-row{border-top:1px solid var(--hair)}
+    .app-row .ic{width:17px;height:17px;color:var(--rubric);flex:none}
+    .app-row .tx{flex:1;min-width:0}
+    .app-lab{display:block;font-family:ui-monospace,monospace;font-size:7px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint)}
+    .app-name{display:block;font-size:10.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+    .app-chev{color:var(--ink-faint);font-size:13px;flex:none;line-height:1}
+    .app-quote{background:var(--surface);border:1px solid var(--hair);border-radius:13px;padding:11px 13px;
+      font-family:ui-serif,"New York",Palatino,Georgia,serif;font-size:11px;line-height:1.46;color:var(--ink)}
+    .app-quote .qk{color:var(--rubric)}
+    .app-tabs{display:flex;justify-content:space-around;align-items:center;padding:7px 5px 9px;
+      border-top:1px solid var(--hair);background:color-mix(in srgb,var(--surface) 75%,transparent);
+      -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+    .app-tab{display:flex;flex-direction:column;align-items:center;gap:3px;color:var(--ink-faint)}
+    .app-tab svg{width:15px;height:15px}
+    .app-tab span{font-size:6.5px;letter-spacing:.01em}
+    .app-tab.active{color:var(--rubric)}
 
     /* GREAT CONVERSATION */
     .gc{background:var(--surface);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
