@@ -179,7 +179,7 @@ El Worker+D1 (si se hace) **solo guarda** correos; **enviar** el aviso a todos n
 - [ ] **Dirección postal en Buttondown** (CAN-SPAM: los correos comerciales exigen dirección física + unsubscribe) antes del blast del 1-nov.
 - [x] ~~Legales: sección "Regional rights" (US/CA + EEA/UK) + línea de protección al consumidor~~ ✅ agregadas.
 - [ ] Poner la **URL de privacidad** (`alephlibrary.com/privacy/`) en App Store Connect + "App Privacy" (nutrition label).
-- [ ] Imagen **OG 1200×630** (3.3).
+- [x] ~~Imagen **OG 1200×630**~~ ✅ (`og-image.png`, generada con Swift/AppKit + enlazada en `og:image`/`twitter:image`).
 - [ ] Capturas reales de la app en el iPhone (3.4).
 - [ ] Verificar en device real (Safari iOS, claro/oscuro).
 - [ ] `git push` → Cloudflare purga caché (o purgar manual).
