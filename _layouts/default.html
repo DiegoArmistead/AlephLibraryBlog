@@ -113,6 +113,12 @@
     .mark img{height:22px;width:auto}
     .mark span{font-family:ui-serif,"New York","Iowan Old Style",Palatino,Georgia,serif;font-size:21px;
       font-weight:600;letter-spacing:.01em}
+    .top .brand{display:flex;align-items:center;gap:15px}
+    .top .tagline{font-family:ui-serif,"New York","Iowan Old Style",Palatino,Georgia,serif;font-style:italic;
+      font-size:14.5px;color:var(--ink-soft);text-decoration:none;white-space:nowrap;letter-spacing:.01em;
+      padding-left:15px;border-left:1px solid var(--hair-strong);transition:color .25s var(--ease)}
+    .top .tagline:hover{color:var(--rubric)}
+    @media(max-width:760px){.top .tagline{display:none}}
     nav.links{display:flex;align-items:center;gap:30px}
     nav.links a.nl{font-size:14px;color:var(--ink-soft);text-decoration:none;letter-spacing:.01em;
       transition:color .25s;position:relative}
@@ -352,10 +358,13 @@
 
   <header class="top" id="top">
     <div class="wrap">
-      <a class="mark" href="{{ '/' | relative_url }}#home" aria-label="Aleph — home">
-        <img src="{{ '/aleph_logo_tinta_transparente.png' | relative_url }}" alt="">
-        <span>Aleph</span>
-      </a>
+      <div class="brand">
+        <a class="mark" href="{{ '/' | relative_url }}#home" aria-label="Aleph — home">
+          <img src="{{ '/aleph_logo_tinta_transparente.png' | relative_url }}" alt="">
+          <span>Aleph</span>
+        </a>
+        <a class="tagline" href="#conversation">Join the Great Conversation</a>
+      </div>
       <nav class="links" aria-label="Primary">
         <a class="nl" href="#idea">The Idea</a>
         <a class="nl" href="#graph">The Graph</a>
