@@ -12,6 +12,8 @@ timezone: America/Puerto_Rico
 # SEO: genera /sitemap.xml automáticamente (plugin permitido en GitHub Pages)
 plugins:
   - jekyll-sitemap
+include:
+  - .well-known
 exclude:
   - README.md
   - .gitignore
