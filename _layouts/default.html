@@ -344,6 +344,20 @@
     .legal a{color:var(--rubric);text-decoration:underline;text-underline-offset:2px}
     .legal .back{display:inline-block;margin-top:42px;font-size:14px;font-family:ui-monospace,monospace;letter-spacing:.04em}
 
+    /* MANIFESTO / ABOUT */
+    .manifesto{padding:clamp(60px,9vw,104px) 0;position:relative;z-index:2}
+    .manifesto .wrap{max-width:720px}
+    .manifesto .eyebrow{display:block;text-align:center;margin-bottom:24px}
+    .manifesto h1{font-family:ui-serif,"New York",Palatino,Georgia,serif;font-size:clamp(32px,5vw,48px);font-weight:700;
+      letter-spacing:-.02em;text-align:center;line-height:1.05;margin-bottom:clamp(38px,6vw,56px);text-wrap:balance}
+    .manifesto p{font-family:ui-serif,"New York","Iowan Old Style",Palatino,Georgia,serif;font-size:19px;line-height:1.66;
+      color:var(--ink);margin-bottom:21px;text-wrap:pretty}
+    .manifesto .pull{font-size:clamp(23px,3.3vw,31px);line-height:1.32;color:var(--rubric);font-style:italic;
+      text-align:center;margin:clamp(32px,5vw,46px) auto;max-width:22ch;letter-spacing:-.01em;font-weight:600}
+    .manifesto .sig{margin-top:34px;font-style:italic;color:var(--ink-soft);font-size:18px;line-height:1.7}
+    .manifesto .back{display:inline-block;margin-top:44px;font-size:14px;font-family:ui-monospace,monospace;
+      letter-spacing:.04em;color:var(--rubric);text-decoration:none}
+
     @media (prefers-reduced-motion:reduce){
       html{scroll-behavior:auto}
       *,*::before,*::after{animation:none!important;transition-duration:.001ms!important}
@@ -382,7 +396,7 @@
       <img class="wm" src="{{ '/aleph_wordmark-2.png' | relative_url }}" alt="Aleph">
       <p class="tag">Engineered by one person, with severe rigor. For those who read to build mental models—not to show off a counter.</p>
       <p class="meta">Coming November 1 to iOS · &copy; {{ site.time | date: '%Y' }}</p>
-      <p class="legal-links"><a href="{{ '/privacy/' | relative_url }}">Privacy</a> · <a href="{{ '/terms/' | relative_url }}">Terms</a> · <a href="mailto:support@alephlibrary.com">support@alephlibrary.com</a></p>
+      <p class="legal-links"><a href="{{ '/about/' | relative_url }}">About</a> · <a href="{{ '/privacy/' | relative_url }}">Privacy</a> · <a href="{{ '/terms/' | relative_url }}">Terms</a> · <a href="mailto:support@alephlibrary.com">support@alephlibrary.com</a></p>
     </div>
   </footer>
 
