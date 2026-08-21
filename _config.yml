@@ -9,6 +9,9 @@ baseurl: ""  # Debe quedar absolutamente vacío si usas un dominio TLD.
 permalink: /:title/
 markdown: kramdown
 timezone: America/Puerto_Rico
+# SEO: genera /sitemap.xml automáticamente (plugin permitido en GitHub Pages)
+plugins:
+  - jekyll-sitemap
 exclude:
   - README.md
   - .gitignore
